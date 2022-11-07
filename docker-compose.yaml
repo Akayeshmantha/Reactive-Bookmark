@@ -1,0 +1,15 @@
+version: "2"
+services:
+  sample_db-postgresql:
+    image: postgres:latest
+    ports:
+      - 5434:5432
+    environment:
+      - POSTGRES_PASSWORD=sample
+      - POSTGRES_USER=sample
+      - POSTGRES_DB=sample
+    volumes:
+      - sample_db:/var/lib/postgresql/data1
+
+volumes:
+  sample_db:

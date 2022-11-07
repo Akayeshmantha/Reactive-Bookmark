@@ -1,0 +1,21 @@
+server:
+  port: 8083
+
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5434/sample
+    password: sample
+    username: sample
+
+  h2:
+    console:
+      enabled: true
+  sql:
+    init:
+      mode: always
+  main:
+    allow-bean-definition-overriding: true
+
+logging:
+  level:
+    org.springframework : DEBUG
